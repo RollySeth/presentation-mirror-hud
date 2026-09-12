@@ -63,6 +63,7 @@ Dependencies are not bundled in the repository:
 | File | Installs |
 | --- | --- |
 | `requirements.txt` | Base application, using `pyproject.toml` as the source of truth |
+| `requirements-build.txt` | Patched packaging tools, including replacement of older Python 3.11 bundled setuptools |
 | `requirements-sensors.txt` | Optional desktop OpenCV/camera and microphone support |
 | `requirements-speech.txt` | Optional offline Vosk recognition and audio support |
 | `requirements-dev.txt` | Base app, tests and a dependency vulnerability scanner |

@@ -1,0 +1,2 @@
+# Keep Python 3.11's preinstalled packaging tools above known vulnerable versions.
+setuptools>=83

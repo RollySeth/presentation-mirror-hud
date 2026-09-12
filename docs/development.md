@@ -56,6 +56,12 @@ Dependency manifests declare compatible ranges. Audit the packages actually
 installed on each target and keep the OS, Python and packages updated. An audit
 only covers known advisories, not every vulnerability or bundled native library.
 
+`requirements.txt` also installs `requirements-build.txt`. This upgrades older
+`setuptools` bundled with Python 3.11 to version 83 or later; build isolation
+alone does not replace vulnerable packaging tools already in the environment.
+CI upgrades these tools before installing dependencies and still audits the
+entire installed environment without suppressing advisories.
+
 ## Demo artwork
 
 ```bash
