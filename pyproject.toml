@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "presenter-mirror-hud"
 version = "0.1.0"
-description = "An offline-first presentation mirror HUD and browser companion"
+description = "Presentation rehearsal on a Raspberry Pi smart mirror with a browser companion"
 requires-python = ">=3.11"
 dependencies = [
   "Flask>=3.1.3,<4",

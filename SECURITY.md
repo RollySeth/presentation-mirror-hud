@@ -54,7 +54,9 @@ add or scrub previous commits.
 
 Use an explicit publication allowlist, review every staged path and diff,
 inspect image contents/metadata, scan for secrets and audit dependencies before
-publishing. All checked-in demo images must be synthetic and reproducible.
+publishing. Generated UI demo images must be synthetic and reproducible.
+Identifiable hardware photographs require explicit publication approval;
+remove metadata and redact browser details before committing public copies.
 Dependencies and upstream model licenses must remain respected.
 
 Security scans cover known patterns and advisories, not all possible

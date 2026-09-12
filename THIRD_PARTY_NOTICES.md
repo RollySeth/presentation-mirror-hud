@@ -2,7 +2,7 @@
 
 The MIT license at the repository root applies to this project's original code,
 documentation, and generated demonstration artwork, not to dependencies or
-downloaded models.
+downloaded models. The hardware photographs described below are also excluded.
 
 Python packages retain their respective upstream licenses. In particular,
 Pygame is LGPL-licensed and Vosk uses the Apache 2.0 license. Consult the
@@ -24,3 +24,13 @@ Model binaries, user presentations, recordings, and downloaded archives are
 not included in this repository. Review upstream terms before downloading or
 redistributing any model. Initial package/model installation requires internet
 access; normal inference uses the installed local assets.
+
+## Hardware photographs
+
+The photographs in `docs/images/hardware/` were supplied for this project's
+README and published with explicit approval to retain the visible person.
+Their metadata and visible browser chrome were removed in the public copies.
+They are not synthetic demo images and are not included in the MIT license.
+Copyright remains with the respective photographer; all rights reserved.
+Repository inclusion does not grant permission to reuse a person's likeness
+or republish these photographs independently.

@@ -1,14 +1,38 @@
 # Presentation Mirror HUD
 
-An **offline-first Raspberry Pi presentation coach** with a neon portrait
-display and a **phone/PC browser companion**. Designed for a DIY two-way mirror
-over an HDMI monitor, or an ordinary monitor while developing.
+A **presentation rehearsal app for a Raspberry Pi smart mirror**.
+Export your slides as images, upload them together through the **phone/PC
+browser companion**, and rehearse in front of the mirror with your slides,
+timer and coaching feedback in view.
+
+The DIY setup places a two-way mirror over an HDMI monitor connected to the
+Raspberry Pi. You can also use an ordinary monitor while setting it up.
 
 <img src="docs/images/hud-demo.png" width="350" alt="Portrait mirror HUD with synthetic slide, coaching, position and expression indicators">
 <img src="docs/images/companion-demo.png" width="350" alt="Browser companion with synthetic rehearsal data">
 
-**All visuals use generated demonstration content and simulated measurements.**
+**The two interface screenshots above use generated demonstration content and simulated measurements.**
 They are not recordings, real presentations, or evidence of recognition accuracy.
+
+## DIY mirror in use
+
+These user-contributed photographs show the physical mirror, USB camera and
+laptop companion. Publication with the person visible was explicitly approved.
+Image metadata and browser/address/task bars have been removed from the public
+copies; originals are not included.
+
+| Portrait mirror | Earlier prototype |
+| --- | --- |
+| <img src="docs/images/hardware/portrait-mirror.jpg" width="380" alt="Physical portrait mirror with a USB camera and neon rehearsal HUD"> | <img src="docs/images/hardware/early-prototype.jpg" width="380" alt="Earlier framed-mirror prototype showing an initial rehearsal interface"> |
+
+| Mirror and browser companion | Desk setup |
+| --- | --- |
+| <img src="docs/images/hardware/mirror-and-companion.jpg" width="480" alt="Mirror HUD alongside the companion running on a laptop"> | <img src="docs/images/hardware/desk-setup.jpg" width="480" alt="DIY framed mirror and laptop arranged on a desk"> |
+
+The early prototype shows an older UI, including legacy eye-line/gesture
+placeholders; it is **not evidence of eye or full-body tracking**. Photographs
+illustrate hardware and layout, not recognition accuracy. Photo reuse terms
+are in [third-party notices](THIRD_PARTY_NOTICES.md#hardware-photographs).
 
 ## What is included
 
@@ -23,6 +47,17 @@ They are not recordings, real presentations, or evidence of recognition accuracy
 The browser companion is served by `presenter_hud.api` and shares the Pi's local
 state. It is included here, not a separate downloaded binary or cloud service.
 There is no required API key or cloud account.
+
+## Rehearsal workflow
+
+1. Export your presentation slides as separate PNG, JPEG or WebP images.
+2. Open the browser companion and select the exported images together for bulk upload.
+3. Set the rehearsal title and duration, then start.
+4. Practice in front of the smart mirror; advance slides from the companion or
+   keyboard while the mirror shows the timer and available coaching signals.
+
+The current version accepts **exported slide images**, not native presentation
+or PDF files. Export/conversion happens in your presentation software before upload.
 
 ## Hardware checklist
 
@@ -81,9 +116,10 @@ Use SSH tunneling for PC access; a phone/network deployment needs an encrypted,
 access-restricted connection. **Do not port-forward the development server or
 publish it through an anonymous tunnel.**
 
-No credentials, tokens, device serials, account details, personal slides,
-recordings, runtime state, model binaries, or historical repositories are
-included. Runtime state and uploaded slides remain on the host and may contain
+No credentials, tokens, device serials, account details, original presentation
+files, recordings, runtime state, model binaries, or historical repositories
+are included. The approved hardware photographs above do show a person and
+on-screen presentation imagery. Runtime state and uploaded slides remain on the host and may contain
 private information: protect the device and delete them when no longer needed.
 The app does not intentionally save camera frames, raw audio, or transcripts.
 It does save aggregate measurements and templated coaching/session state.
@@ -110,5 +146,6 @@ No scanner or review guarantees that software is vulnerability-free.
 ## License
 
 Original code and generated demo artwork: [MIT](LICENSE).
+User-contributed hardware photographs are excluded from that license.
 Dependencies and models keep their own licenses; see
 [third-party notices](THIRD_PARTY_NOTICES.md).
