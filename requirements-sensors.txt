@@ -1,0 +1,3 @@
+# Desktop camera/microphone support. On Raspberry Pi, prefer the distro's OpenCV.
+-e .[camera]
+sounddevice>=0.5.2,<0.6

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Presentation Mirror HUD
+Comment=Start the portrait rehearsal HUD
+Exec=/usr/bin/systemctl --user start smartmirror-api.service smartmirror-hud.service
+Icon=video-display
+Terminal=false
+Categories=Education;

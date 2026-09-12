@@ -1,0 +1,8 @@
+# Raspberry Pi OS Desktop system packages.
+git
+python3-venv
+python3-pygame
+python3-opencv
+python3-numpy
+opencv-data
+libportaudio2

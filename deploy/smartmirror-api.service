@@ -1,0 +1,16 @@
+[Unit]
+Description=Presentation Mirror HUD companion API (loopback only)
+
+[Service]
+Type=simple
+WorkingDirectory=%h/presentation-mirror-hud
+Environment=PYTHONPATH=src
+Environment=PYTHONUNBUFFERED=1
+ExecStart=%h/presentation-mirror-hud/.venv/bin/python -m presenter_hud.api --host 127.0.0.1
+UMask=0077
+NoNewPrivileges=true
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,19 @@
+[Unit]
+Description=Presentation Mirror HUD optional camera
+BindsTo=smartmirror-hud.service
+PartOf=smartmirror-hud.service
+After=smartmirror-hud.service
+
+[Service]
+Type=simple
+WorkingDirectory=%h/presentation-mirror-hud
+Environment=PYTHONPATH=src
+Environment=PYTHONUNBUFFERED=1
+Environment=OPENBLAS_NUM_THREADS=1
+Environment=OMP_NUM_THREADS=1
+ExecStart=%h/presentation-mirror-hud/.venv/bin/python -m presenter_hud.sensor_runner --camera --camera-device 0 --interval 1
+UMask=0077
+NoNewPrivileges=true
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=10

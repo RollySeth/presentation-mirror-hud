@@ -1,0 +1,2 @@
+# Optional offline recognition; model assets are downloaded separately.
+-e .[speech]

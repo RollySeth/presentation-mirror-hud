@@ -1,0 +1,16 @@
+[Unit]
+Description=Presentation Mirror HUD portrait display
+ConditionEnvironment=WAYLAND_DISPLAY
+
+[Service]
+Type=simple
+WorkingDirectory=%h/presentation-mirror-hud
+Environment=PYTHONPATH=src
+Environment=PYTHONUNBUFFERED=1
+Environment=SDL_VIDEODRIVER=wayland
+Environment=SDL_AUDIODRIVER=dummy
+ExecStart=%h/presentation-mirror-hud/.venv/bin/python -m presenter_hud.hud --size 1080x1920
+UMask=0077
+NoNewPrivileges=true
+Restart=on-failure
+RestartSec=5
