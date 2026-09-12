@@ -44,6 +44,7 @@ backups/
 !.env.example
 *.pem
 *.key
+*.token
 *.pfx
 *.p12
 credentials*
